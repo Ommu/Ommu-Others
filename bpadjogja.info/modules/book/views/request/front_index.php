@@ -3,7 +3,7 @@
  * Book Requests (book-requests)
  * @var $this RequestController * @var $model BookRequests * @var $dataProvider CActiveDataProvider
  *
- * @author Putra Sudaryanto <putra.sudaryanto@gmail.com>
+ * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @copyright Copyright (c) 2014 Ommu Platform (ommu.co)
  * @link http://company.ommu.co
  * @contect (+62)856-299-4114
