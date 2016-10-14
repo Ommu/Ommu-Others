@@ -98,16 +98,16 @@ class BookRequests extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'request_id' => 'Request',
-			'publish' => 'Publish',
-			'book_id' => 'Book',
-			'requester_id' => 'Requester',
-			'creation_date' => 'Creation Date',
-			'creation_id' => 'Creation',
-			'book_input' => 'Book Title',
-			'book_search' => 'Book',
-			'requester_search' => 'Requester',
-			'creation_search' => 'Creation',
+			'request_id' => Yii::t('attribute', 'Request'),
+			'publish' => Yii::t('attribute', 'Publish'),
+			'book_id' => Yii::t('attribute', 'Book'),
+			'requester_id' => Yii::t('attribute', 'Requester'),
+			'creation_date' => Yii::t('attribute', 'Creation Date'),
+			'creation_id' => Yii::t('attribute', 'Creation'),
+			'book_input' => Yii::t('attribute', 'Book Title'),
+			'book_search' => Yii::t('attribute', 'Book'),
+			'requester_search' => Yii::t('attribute', 'Requester'),
+			'creation_search' => Yii::t('attribute', 'Creation'),
 		);
 	}
 

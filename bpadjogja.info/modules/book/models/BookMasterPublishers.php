@@ -106,21 +106,21 @@ class BookMasterPublishers extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'publisher_id' => 'Publisher',
-			'publish' => 'Publish',
-			'publisher_name' => 'Publisher Name',
-			'publisher_logo' => 'Publisher Logo',
-			'address' => 'Address',
-			'location' => 'Location',
-			'website' => 'Website',
-			'wikipedia' => 'Wikipedia',
-			'creation_date' => 'Creation Date',
-			'creation_id' => 'Creation',
-			'modified_date' => 'Modified Date',
-			'modified_id' => 'Modified',
-			'creation_search' => 'Creation',
-			'modified_search' => 'Modified',
-			'old_logo' => 'Publisher Logo',
+			'publisher_id' => Yii::t('attribute', 'Publisher'),
+			'publish' => Yii::t('attribute', 'Publish'),
+			'publisher_name' => Yii::t('attribute', 'Publisher Name'),
+			'publisher_logo' => Yii::t('attribute', 'Publisher Logo'),
+			'address' => Yii::t('attribute', 'Address'),
+			'location' => Yii::t('attribute', 'Location'),
+			'website' => Yii::t('attribute', 'Website'),
+			'wikipedia' => Yii::t('attribute', 'Wikipedia'),
+			'creation_date' => Yii::t('attribute', 'Creation Date'),
+			'creation_id' => Yii::t('attribute', 'Creation'),
+			'modified_date' => Yii::t('attribute', 'Modified Date'),
+			'modified_id' => Yii::t('attribute', 'Modified'),
+			'creation_search' => Yii::t('attribute', 'Creation'),
+			'modified_search' => Yii::t('attribute', 'Modified'),
+			'old_logo' => Yii::t('attribute', 'Publisher Logo'),
 		);
 	}
 
@@ -326,7 +326,7 @@ class BookMasterPublishers extends CActiveRecord
 			if($publisher_logo->name != '') {
 				$extension = pathinfo($publisher_logo->name, PATHINFO_EXTENSION);
 				if(!in_array($extension, array('bmp','gif','jpg','png')))
-					$this->addError('publisher_logo', 'The file "'.$publisher_logo->name.'" cannot be uploaded. Only files with these extensions are allowed: bmp, gif, jpg, png.');
+					$this->addError('publisher_logo', Yii::t('phrase', 'The file {name} cannot be uploaded. Only files with these extensions are allowed: bmp, gif, jpg, png.', array('{name}'=>$publisher_logo->name)));
 			}
 		}
 		return true;

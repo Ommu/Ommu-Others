@@ -97,15 +97,15 @@ class BookSubject extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'book_id' => 'Book',
-			'subject_id' => 'Subject',
-			'creation_date' => 'Creation Date',
-			'creation_id' => 'Creation',
-			'subject_input' => 'Subject',
-			'book_search' => 'Book',
-			'subject_search' => 'Subject',
-			'creation_search' => 'Creation',
+			'id' => Yii::t('attribute', 'ID'),
+			'book_id' => Yii::t('attribute', 'Book'),
+			'subject_id' => Yii::t('attribute', 'Subject'),
+			'creation_date' => Yii::t('attribute', 'Creation Date'),
+			'creation_id' => Yii::t('attribute', 'Creation'),
+			'subject_input' => Yii::t('attribute', 'Subject'),
+			'book_search' => Yii::t('attribute', 'Book'),
+			'subject_search' => Yii::t('attribute', 'Subject'),
+			'creation_search' => Yii::t('attribute', 'Creation'),
 		);
 	}
 

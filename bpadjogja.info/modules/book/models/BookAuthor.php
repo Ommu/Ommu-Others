@@ -97,15 +97,15 @@ class BookAuthor extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'book_id' => 'Book',
-			'author_id' => 'Author',
-			'creation_date' => 'Creation Date',
-			'creation_id' => 'Creation',
-			'author_input' => 'Author',
-			'book_search' => 'Book',
-			'author_search' => 'Author',
-			'creation_search' => 'Creation',
+			'id' => Yii::t('attribute', 'ID'),
+			'book_id' => Yii::t('attribute', 'Book'),
+			'author_id' => Yii::t('attribute', 'Author'),
+			'creation_date' => Yii::t('attribute', 'Creation Date'),
+			'creation_id' => Yii::t('attribute', 'Creation'),
+			'author_input' => Yii::t('attribute', 'Author'),
+			'book_search' => Yii::t('attribute', 'Book'),
+			'author_search' => Yii::t('attribute', 'Author'),
+			'creation_search' => Yii::t('attribute', 'Creation'),
 		);
 	}
 

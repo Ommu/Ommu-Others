@@ -107,19 +107,19 @@ class BookMasterAuthors extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'author_id' => 'Author',
-			'publish' => 'Publish',
-			'author_name' => 'Author Name',
-			'author_photo' => 'Author Photo',
-			'website' => 'Website',
-			'wikipedia' => 'Wikipedia',
-			'creation_date' => 'Creation Date',
-			'creation_id' => 'Creation',
-			'modified_date' => 'Modified Date',
-			'modified_id' => 'Modified',
-			'creation_search' => 'Creation',
-			'modified_search' => 'Modified',
-			'old_photo' => 'Old Photo',
+			'author_id' => Yii::t('attribute', 'Author'),
+			'publish' => Yii::t('attribute', 'Publish'),
+			'author_name' => Yii::t('attribute', 'Author Name'),
+			'author_photo' => Yii::t('attribute', 'Author Photo'),
+			'website' => Yii::t('attribute', 'Website'),
+			'wikipedia' => Yii::t('attribute', 'Wikipedia'),
+			'creation_date' => Yii::t('attribute', 'Creation Date'),
+			'creation_id' => Yii::t('attribute', 'Creation'),
+			'modified_date' => Yii::t('attribute', 'Modified Date'),
+			'modified_id' => Yii::t('attribute', 'Modified'),
+			'creation_search' => Yii::t('attribute', 'Creation'),
+			'modified_search' => Yii::t('attribute', 'Modified'),
+			'old_photo' => Yii::t('attribute', 'Old Photo'),
 		);
 	}
 
@@ -320,7 +320,7 @@ class BookMasterAuthors extends CActiveRecord
 			if($author_photo->name != '') {
 				$extension = pathinfo($author_photo->name, PATHINFO_EXTENSION);
 				if(!in_array($extension, array('bmp','gif','jpg','png')))
-					$this->addError('author_photo', 'The file "'.$author_photo->name.'" cannot be uploaded. Only files with these extensions are allowed: bmp, gif, jpg, png.');
+			$this->addError('author_photo', Yii::t('phrase', 'The file {name} cannot be uploaded. Only files with these extensions are allowed: bmp, gif, jpg, png.', array('{name}'=>$author_photo->name)));
 			}
 		}
 		return true;

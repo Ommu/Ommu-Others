@@ -134,30 +134,30 @@ class BookMasters extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'book_id' => 'Book',
-			'publish' => 'Publish',
-			'publisher_id' => 'Publisher',
-			'isbn' => 'Isbn',
-			'title' => 'Title',
-			'description' => 'Description',
-			'cover' => 'Cover',
-			'edition' => 'Edition',
-			'publish_city' => 'Publish City',
-			'publish_year' => 'Publish Year',
-			'paging' => 'Paging',
-			'sizes' => 'Sizes',
-			'creation_date' => 'Creation Date',
-			'creation_id' => 'Creation',
-			'modified_date' => 'Modified Date',
-			'modified_id' => 'Modified',
-			'publisher_search' => 'Publisher',
-			'creation_search' => 'Creation',
-			'modified_search' => 'Modified',
-			'old_cover' => 'Old Cover',
-			'publisher_input' => 'Publisher',
-			'subject_input' => 'Subject',
-			'author_input' => 'Author',
-			'interpreter_input' => 'Interpreter',
+			'book_id' => Yii::t('attribute', 'Book'),
+			'publish' => Yii::t('attribute', 'Publish'),
+			'publisher_id' => Yii::t('attribute', 'Publisher'),
+			'isbn' => Yii::t('attribute', 'Isbn'),
+			'title' => Yii::t('attribute', 'Title'),
+			'description' => Yii::t('attribute', 'Description'),
+			'cover' => Yii::t('attribute', 'Cover'),
+			'edition' => Yii::t('attribute', 'Edition'),
+			'publish_city' => Yii::t('attribute', 'Publish City'),
+			'publish_year' => Yii::t('attribute', 'Publish Year'),
+			'paging' => Yii::t('attribute', 'Paging'),
+			'sizes' => Yii::t('attribute', 'Sizes'),
+			'creation_date' => Yii::t('attribute', 'Creation Date'),
+			'creation_id' => Yii::t('attribute', 'Creation'),
+			'modified_date' => Yii::t('attribute', 'Modified Date'),
+			'modified_id' => Yii::t('attribute', 'Modified'),
+			'publisher_search' => Yii::t('attribute', 'Publisher'),
+			'creation_search' => Yii::t('attribute', 'Creation'),
+			'modified_search' => Yii::t('attribute', 'Modified'),
+			'old_cover' => Yii::t('attribute', 'Old Cover'),
+			'publisher_input' => Yii::t('attribute', 'Publisher'),
+			'subject_input' => Yii::t('attribute', 'Subject'),
+			'author_input' => Yii::t('attribute', 'Author'),
+			'interpreter_input' => Yii::t('attribute', 'Interpreter'),
 		);
 	}
 
@@ -391,7 +391,7 @@ class BookMasters extends CActiveRecord
 			if($cover->name != '') {
 				$extension = pathinfo($cover->name, PATHINFO_EXTENSION);
 				if(!in_array($extension, array('bmp','gif','jpg','png')))
-					$this->addError('cover', 'The file "'.$cover->name.'" cannot be uploaded. Only files with these extensions are allowed: bmp, gif, jpg, png.');
+					$this->addError('cover', Yii::t('phrase', 'The file {name} cannot be uploaded. Only files with these extensions are allowed: bmp, gif, jpg, png.', array('{name}'=>$cover->name)));
 			}
 			
 			if(in_array($controller, array('request','o/request'))) {

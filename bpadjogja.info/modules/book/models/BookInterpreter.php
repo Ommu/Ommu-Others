@@ -97,15 +97,15 @@ class BookInterpreter extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'book_id' => 'Book',
-			'interpreter_id' => 'Interpreter',
-			'creation_date' => 'Creation Date',
-			'creation_id' => 'Creation',
-			'interpreter_input' => 'Interpreter',
-			'book_search' => 'Book',
-			'interpreter_search' => 'Interpreter',
-			'creation_search' => 'Creation',
+			'id' => Yii::t('attribute', 'ID'),
+			'book_id' => Yii::t('attribute', 'Book'),
+			'interpreter_id' => Yii::t('attribute', 'Interpreter'),
+			'creation_date' => Yii::t('attribute', 'Creation Date'),
+			'creation_id' => Yii::t('attribute', 'Creation'),
+			'interpreter_input' => Yii::t('attribute', 'Interpreter'),
+			'book_search' => Yii::t('attribute', 'Book'),
+			'interpreter_search' => Yii::t('attribute', 'Interpreter'),
+			'creation_search' => Yii::t('attribute', 'Creation'),
 		);
 	}
 

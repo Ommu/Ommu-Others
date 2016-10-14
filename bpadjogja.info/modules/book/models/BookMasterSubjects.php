@@ -92,12 +92,12 @@ class BookMasterSubjects extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'subject_id' => 'Subject',
-			'subject' => 'Subject',
-			'description' => 'Description',
-			'creation_date' => 'Creation Date',
-			'creation_id' => 'Creation',
-			'creation_search' => 'Creation',
+			'subject_id' => Yii::t('attribute', 'Subject'),
+			'subject' => Yii::t('attribute', 'Subject'),
+			'description' => Yii::t('attribute', 'Description'),
+			'creation_date' => Yii::t('attribute', 'Creation Date'),
+			'creation_id' => Yii::t('attribute', 'Creation'),
+			'creation_search' => Yii::t('attribute', 'Creation'),
 		);
 	}
 
