@@ -87,7 +87,7 @@ class BookSubject extends CActiveRecord
 		return array(
 			'book_relation' => array(self::BELONGS_TO, 'BookMasters', 'book_id'),
 			'subject_relation' => array(self::BELONGS_TO, 'BookMasterSubjects', 'subject_id'),
-			'creation_relation' => array(self::BELONGS_TO, 'Users', 'creation_id'),
+			'creation' => array(self::BELONGS_TO, 'Users', 'creation_id'),
 		);
 	}
 
@@ -152,14 +152,14 @@ class BookSubject extends CActiveRecord
 				'alias'=>'subject_relation',
 				'select'=>'subject'
 			),
-			'creation_relation' => array(
-				'alias'=>'creation_relation',
+			'creation' => array(
+				'alias'=>'creation',
 				'select'=>'displayname'
 			),
 		);
 		$criteria->compare('book_relation.title',strtolower($this->book_search), true);
 		$criteria->compare('subject_relation.subject',strtolower($this->subject_search), true);
-		$criteria->compare('creation_relation.displayname',strtolower($this->creation_search), true);
+		$criteria->compare('creation.displayname',strtolower($this->creation_search), true);
 
 		if(!isset($_GET['BookSubject_sort']))
 			$criteria->order = 't.id DESC';
@@ -219,7 +219,7 @@ class BookSubject extends CActiveRecord
 			);
 			$this->defaultColumns[] = array(
 				'name' => 'creation_search',
-				'value' => '$data->creation_relation->displayname',
+				'value' => '$data->creation->displayname',
 			);
 			$this->defaultColumns[] = array(
 				'name' => 'creation_date',

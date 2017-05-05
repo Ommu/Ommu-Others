@@ -22,7 +22,7 @@
 
 <div class="meta-date clearfix">
 	<span class="date"><i class="fa fa-calendar"></i>&nbsp;<?php echo Utility::dateFormat($model->published_date, true);?></span>
-	<span class="by"><i class="fa fa-user"></i>&nbsp;<?php echo $model->resensator_id != 0 ? ucwords($model->resensator_relation->name) : ucwords($model->creation_relation->displayname);?></span>
+	<span class="by"><i class="fa fa-user"></i>&nbsp;<?php echo $model->resensator_id != 0 ? ucwords($model->resensator_relation->name) : ucwords($model->creation->displayname);?></span>
 	<span class="view"><i class="fa fa-eye"></i>&nbsp;<?php echo $model->view;?></span>
 </div>
 
